@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bonu cake</title>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+	<script>
+		function sendEmail() {
+			Email.send({
+				Host: "smtp.gmail.com",
+				Username : "ziyodulla0105@gmail.com",
+				Password : "ziyodulla123",
+				To : 'ziyodulla0105@gmail.com',
+				From : "akbardaminov51@gmail.com",
+				Subject : "Test mail Subject",
+				Body : "Test Mail Body",
+			})
+			.then(function(message){
+				alert("mail sent successfully")
+			});
+		}
+	</script>
+</head>
+<body>  
+    <table>
+        <tr>
+            <td>Subject</td>
+            <td><input type="text" id="mailSubject"></td>
+        </tr>
+        <tr>
+            <td>Body</td>
+            <td><input type="text" id="mailBody"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="send the mail" onclick="sendEmail()"/>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
